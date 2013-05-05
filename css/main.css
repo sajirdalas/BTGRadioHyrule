@@ -1,0 +1,110 @@
+/*Regular house-keeping*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body, #TheD {
+	width: 100%;
+}
+
+#TheD{
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+body {
+	width: 100%;
+	background-image: url('../img/blackorchid.png');
+}
+
+/*The album art*/
+
+#Art{
+	width: 80%;
+	max-height: 60%;
+	margin-top: 40px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/*The box with tags*/
+
+#ParaWrapper{
+	height: 40%;
+	width: 100%;
+}
+
+#The_Parameters{
+	margin: 30px auto;
+	min-width: 40%;
+	max-width: 300px;
+	/*background: linear-gradient(#003D00,#195019); */
+	background-image: url('../img/sign_text.png');
+	color: black;
+    text-shadow:
+    -1px -1px 0 #FFFFFF,  
+     1px -1px 0 #FFFFFF,
+    -1px 1px 0 #FFFFFF,
+     1px 1px 0 #FFFFFF;
+	border-radius: 5px;
+}
+
+/*The button*/
+
+#PlayPauseButton{
+	max-height: 10%;
+}
+
+/*The Options Button */
+#OptionsB{
+	width: 40px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/*Media queries*/
+
+@media screen and (orientation:landscape){
+	#Art{
+		float: left;
+		margin-top: 60px;
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 40%;
+	}
+	#ParaWrapper{
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+	#The_Parameters{
+		margin-top: 90px;
+	}
+}
+
+
+@media screen and (max-width: 400px), screen and (orientation:portrait){
+	#Art{
+		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width: 500px){
+
+
+	#The_Parameters{
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 350px), screen and (orientation:portrait){
+	#Art{
+		margin-top: 40px;
+	}
+
+}

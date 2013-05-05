@@ -1,0 +1,14 @@
+{
+  "name": "Radio Hyrule Alpha",
+  "description": "Simple app for listening to radio hyrule",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/img/art60.png",
+    "128": "/img/art128.png"
+  },
+  "developer": {
+    "name": "Sajirdalas"
+  },
+  "default_locale": "en",
+  "installs_allowed_from": ["*"]
+}
