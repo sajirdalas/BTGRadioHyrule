@@ -4,5 +4,4 @@ All tags are parsed from the site using YQL and audio played using an HTML5 audi
 
 Current bugs:
 -Occasionally the art and tags stop updating (investigating)
--Pausing kills the stream (I know what causes it. Working on this)
 

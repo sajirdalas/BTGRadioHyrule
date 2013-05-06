@@ -54,15 +54,16 @@ function reload_on_error(){
 }
 
 function stop() {
+
 	var audio = $("audio").get(0);
 	audio.pause();
-	$("audio").html("");
+	$("audio").attr("src","");
 	audio.load();
 	$("audio").remove();
 	if(Quality){
-		$("#Content").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen"></audio>');
+		$("body").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen"></audio>');
 	}else{
-		$("#Content").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen-lo"></audio>');
+		$("body").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen-lo"></audio>');
 	}
 	$("audio").on("error", function() {
 		console.log("I SHALL NOT GIVE UP");
@@ -110,14 +111,18 @@ function init_process() {
 
 	$("#OptionsB").click(function(){
 		if(Quality){
-			Quality=false;
-			if(playing){
-				toggle();
+			if (confirm('Do you want to change to Low Quality Mode?')) { 
+				Quality=false;
+				if(playing){
+					toggle();
+				}
 			}
 		}else{
-			Quality=true;
-			if(playing){
-				toggle();
+			if (confirm('Do you want to change to High Quality Mode?')) { 
+				Quality=true;
+				if(playing){
+					toggle();
+				}
 			}
 		}
 	});;
