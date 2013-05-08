@@ -1,11 +1,12 @@
 
 
 function get_info_first() {
-	$("#toast").contents()[2].nodeValue = "Downloading tags. Please wait";
-	$("#toast").removeClass("hidden");
+	// $("#toast").contents()[2].nodeValue = "Downloading tags. Please wait";
+	// $("#toast").removeClass("hidden");
 	$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22radiohyrule.com%2Fsites%2Fradiohyrule.com%2Fwww%2Fnowplaying.json%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",
     function(data) {
-    	$("#toast").addClass("hidden");
+    	// $("#toast").addClass("hidden");
+    	$("#toast").fadeOut();
     	$("#toast").contents()[2].nodeValue = "Please wait, buffering";
         var song = data.query.results.json.title;
         var artist = data.query.results.json.artist;
@@ -103,11 +104,13 @@ function add_audio_listeners(){
 	});
 
 	$("audio").on("waiting",function(){
-		$("#toast").removeClass("hidden");
+		// $("#toast").removeClass("hidden");
+		$("#toast").fadeIn();
 	});
 
 	$("audio").on("playing",function(){
-		$("#toast").addClass("hidden");
+		// $("#toast").addClass("hidden");
+		$("#toast").fadeOut();
 	});
 }
 
