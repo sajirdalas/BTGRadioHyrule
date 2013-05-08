@@ -6,8 +6,7 @@ function get_info_first() {
 	$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22radiohyrule.com%2Fsites%2Fradiohyrule.com%2Fwww%2Fnowplaying.json%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",
     function(data) {
     	// $("#toast").addClass("hidden");
-    	$("#toast").fadeOut();
-    	$("#toast").contents()[2].nodeValue = "Please wait, buffering";
+    	$("#toast").fadeOut(400,function(){$("#toast").contents()[2].nodeValue = "Buffering. Please Wait";});
         var song = data.query.results.json.title;
         var artist = data.query.results.json.artist;
         var album = data.query.results.json.album;
@@ -147,10 +146,10 @@ function init_process() {
 
 	add_audio_listeners();
 
-	if($("audio").get(0).canPlayType("audio/mp3")==""){
-		alert("Your browser does not support MP3");
-		close();
-	}
+	// if($("audio").get(0).canPlayType("audio/mp3")==""){
+	// 	alert("Your browser does not support MP3");
+	// 	close();
+	// }
 
 }
 

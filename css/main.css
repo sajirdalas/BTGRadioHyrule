@@ -91,7 +91,7 @@ body {
 
 #toast{
 	min-height: 10%;
-	max-width: 40%;
+	/*max-width: 70%;*/
 	padding-right: 10px;
 	background-color: rgba(4,4,4,0.8);
 	position: absolute;
