@@ -1,3 +1,19 @@
+/*Animations*/
+
+@-moz-keyframes rotate {
+from { 
+-moz-transform: rotateZ(0deg);
+}
+to { -moz-transform: rotateZ(-360deg);}
+}
+
+@-webkit-keyframes rotate {
+from { 
+-webkit-transform: rotateZ(0deg);
+}
+to { -webkit-transform: rotateZ(-360deg);}
+}
+
 /*Regular house-keeping*/
 
 *{
@@ -65,6 +81,34 @@ body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+/*The loading toast*/
+
+.hidden{
+	display: none;
+}
+
+#toast{
+	min-height: 10%;
+	max-width: 40%;
+	padding-right: 10px;
+	background-color: rgba(4,4,4,0.8);
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: white;
+}
+
+#toast > img{
+	-moz-animation: rotate 1s;
+    -webkit-animation: rotate 1s;
+    -moz-animation-timing-function:linear;
+    -webkit-animation-timing-function:linear;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 /*Media queries*/

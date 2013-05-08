@@ -8,11 +8,20 @@
 	<script type='text/javascript' src="js/main.js"></script>
 </head>
 <body>
-				<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen">
+			<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen">
 
 				<!-- source src="http://listen.radiohyrule.com:8000/listen" type="audio/mp3" -->
 
 			</audio>
+
+			<!-- This hidden div is the loading toast -->
+
+			 <div id="toast" class="hidden">
+				<img src="img/refresh.png" /> Please wait, buffering
+ 			</div>
+
+ 			<!-- Wrapper for the content -->
+
 	<div id="TheD">
 			<img id="OptionsB" src="img/cog.png" />
 
