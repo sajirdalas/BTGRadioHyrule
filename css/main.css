@@ -114,7 +114,13 @@ body {
 
 /*Media queries*/
 
-@media screen and (orientation:landscape) and (max-width: 600px) {
+@media handheld{
+	#TheD{
+		max-width: 100%;
+	}
+}
+
+@media handheld and (orientation:landscape) {
 	#Art{
 		float: left;
 		margin-top: 60px;
