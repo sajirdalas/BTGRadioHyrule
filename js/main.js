@@ -69,9 +69,9 @@ function stop() {
 	audio.load();
 	$("audio").remove();
 	if(Quality){
-		$("body").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen"></audio>');
+		$("body").append('<audio id="ThePlayer" mozaudiochannel="content" preload="none" src="http://listen.radiohyrule.com:8000/listen"></audio>');
 	}else{
-		$("body").append('<audio id="ThePlayer" preload="none" src="http://listen.radiohyrule.com:8000/listen-lo"></audio>');
+		$("body").append('<audio id="ThePlayer" mozaudiochannel="content" preload="none" src="http://listen.radiohyrule.com:8000/listen-lo"></audio>');
 	}
 	add_audio_listeners();
 }
@@ -127,6 +127,7 @@ function init_process() {
 	});
 
 	$("#OptionsB").click(function(){
+		$("#toast").fadeOut();
 		if(Quality){
 			if (confirm('Do you want to change to Low Quality Mode?')) { 
 				Quality=false;
